@@ -1,0 +1,131 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bg3)"/>
+  
+  <!-- Mobile Phones -->
+  <!-- Phone 1 -->
+  <rect x="80" y="30" width="90" height="180" rx="18" fill="url(#phone)" stroke="#1a252f" stroke-width="2"/>
+  <rect x="85" y="45" width="80" height="140" rx="4" fill="#ffffff"/>
+  
+  <!-- Phone 1 - Status Bar -->
+  <rect x="85" y="45" width="80" height="15" fill="#f8f9fa"/>
+  <text x="90" y="55" font-family="sans-serif" font-size="6" fill="#2c3e50">9:41 AM</text>
+  <circle cx="155" cy="52" r="2" fill="#2ecc71"/>
+  <rect x="158" y="50" width="5" height="4" rx="1" fill="#2c3e50"/>
+  
+  <!-- Phone 1 - Social Feed -->
+  <!-- Profile Header -->
+  <circle cx="95" cy="75" r="8" fill="#3498db"/>
+  <text x="87" y="79" font-family="sans-serif" font-size="8" fill="#ffffff" font-weight="bold">AC</text>
+  <text x="110" y="75" font-family="sans-serif" font-size="6" fill="#2c3e50" font-weight="bold">Alex Chen</text>
+  <text x="110" y="82" font-family="sans-serif" font-size="4" fill="#7f8c8d">2 hours ago</text>
+  
+  <!-- Post Content -->
+  <rect x="90" y="90" width="70" height="40" rx="4" fill="#ecf0f1"/>
+  <text x="95" y="100" font-family="sans-serif" font-size="5" fill="#2c3e50">Just launched my new</text>
+  <text x="95" y="107" font-family="sans-serif" font-size="5" fill="#2c3e50">e-commerce platform!</text>
+  <text x="95" y="114" font-family="sans-serif" font-size="5" fill="#2c3e50">Built with React & Node.js</text>
+  
+  <!-- Post Image Placeholder -->
+  <rect x="95" y="118" width="60" height="30" rx="2" fill="#3498db" opacity="0.3"/>
+  <text x="115" y="135" font-family="sans-serif" font-size="6" fill="#2c3e50">🚀 Demo</text>
+  
+  <!-- Engagement Icons -->
+  <path d="M95 155 L100 150 L105 155 L100 160 Z" fill="#e74c3c"/>
+  <text x="108" y="157" font-family="sans-serif" font-size="5" fill="#7f8c8d">24</text>
+  
+  <circle cx="130" cy="155" r="3" fill="none" stroke="#3498db" stroke-width="1"/>
+  <path d="M127 155 C127 152, 133 152, 133 155" stroke="#3498db" stroke-width="1" fill="none"/>
+  <text x="138" y="157" font-family="sans-serif" font-size="5" fill="#7f8c8d">12</text>
+  
+  <path d="M150 152 L155 155 L150 158 M150 155 L158 155" stroke="#2ecc71" stroke-width="1" fill="none"/>
+  <text x="162" y="157" font-family="sans-serif" font-size="5" fill="#7f8c8d">5</text>
+  
+  <!-- Phone 1 - Bottom Navigation -->
+  <rect x="85" y="170" width="80" height="15" fill="#2c3e50"/>
+  <circle cx="100" cy="177.5" r="2" fill="#3498db"/>
+  <rect x="113" y="175.5" width="4" height="4" rx="1" fill="#7f8c8d"/>
+  <circle cx="135" cy="177.5" r="2" fill="#7f8c8d"/>
+  <path d="M145 175 L150 177.5 L145 180" fill="#7f8c8d"/>
+  
+  <!-- Phone 2 -->
+  <rect x="230" y="30" width="90" height="180" rx="18" fill="url(#phone)" stroke="#1a252f" stroke-width="2"/>
+  <rect x="235" y="45" width="80" height="140" rx="4" fill="#ffffff"/>
+  
+  <!-- Phone 2 - Status Bar -->
+  <rect x="235" y="45" width="80" height="15" fill="#f8f9fa"/>
+  <text x="240" y="55" font-family="sans-serif" font-size="6" fill="#2c3e50">9:41 AM</text>
+  <circle cx="305" cy="52" r="2" fill="#2ecc71"/>
+  <rect x="308" y="50" width="5" height="4" rx="1" fill="#2c3e50"/>
+  
+  <!-- Phone 2 - Chat Interface -->
+  <rect x="235" y="60" width="80" height="20" fill="#3498db"/>
+  <circle cx="245" cy="70" r="5" fill="#ffffff"/>
+  <text x="237" y="74" font-family="sans-serif" font-size="6" fill="#2c3e50" font-weight="bold">JS</text>
+  <text x="255" y="67" font-family="sans-serif" font-size="6" fill="#ffffff" font-weight="bold">Jane Smith</text>
+  <text x="255" y="74" font-family="sans-serif" font-size="4" fill="#ecf0f1">Online</text>
+  <circle cx="305" cy="70" r="2" fill="#ffffff"/>
+  
+  <!-- Chat Messages -->
+  <!-- Received Message -->
+  <rect x="240" y="90" width="50" height="15" rx="8" fill="#ecf0f1"/>
+  <text x="245" y="100" font-family="sans-serif" font-size="5" fill="#2c3e50">Hey! How's the project?</text>
+  
+  <!-- Sent Message -->
+  <rect x="265" y="110" width="45" height="15" rx="8" fill="#3498db"/>
+  <text x="270" y="120" font-family="sans-serif" font-size="5" fill="#ffffff">Going great! 🚀</text>
+  
+  <!-- Received Message -->
+  <rect x="240" y="130" width="55" height="15" rx="8" fill="#ecf0f1"/>
+  <text x="245" y="140" font-family="sans-serif" font-size="5" fill="#2c3e50">Can you share a demo?</text>
+  
+  <!-- Typing Indicator -->
+  <rect x="240" y="150" width="25" height="12" rx="6" fill="#ecf0f1"/>
+  <circle cx="248" cy="156" r="1" fill="#7f8c8d"/>
+  <circle cx="252" cy="156" r="1" fill="#7f8c8d"/>
+  <circle cx="256" cy="156" r="1" fill="#7f8c8d"/>
+  
+  <!-- Chat Input -->
+  <rect x="240" y="168" width="65" height="12" rx="6" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="245" y="176" font-family="sans-serif" font-size="5" fill="#7f8c8d">Type a message...</text>
+  <circle cx="300" cy="174" r="3" fill="#3498db"/>
+  <polygon points="298,174 302,172 302,176" fill="#ffffff"/>
+  
+  <!-- Social Features Overlay -->
+  <!-- Notification Badge -->
+  <circle cx="320" cy="40" r="8" fill="#e74c3c"/>
+  <text x="317" y="44" font-family="sans-serif" font-size="6" fill="#ffffff" font-weight="bold">3</text>
+  
+  <!-- Story Indicators -->
+  <circle cx="60" cy="60" r="15" fill="none" stroke="#e74c3c" stroke-width="3"/>
+  <circle cx="60" cy="60" r="12" fill="#3498db"/>
+  <text x="54" y="65" font-family="sans-serif" font-size="8" fill="#ffffff" font-weight="bold">MY</text>
+  
+  <!-- Filter Effects -->
+  <rect x="340" y="80" width="40" height="40" rx="20" fill="#ffffff" opacity="0.9"/>
+  <text x="355" y="95" font-family="sans-serif" font-size="6" fill="#2c3e50">Filter</text>
+  <circle cx="360" cy="105" r="8" fill="#f39c12" opacity="0.7"/>
+  <circle cx="360" cy="105" r="5" fill="#ffffff"/>
+  
+  <!-- Real-time Features -->
+  <circle cx="30" cy="200" r="8" fill="#2ecc71"/>
+  <text x="25" y="215" font-family="sans-serif" font-size="6" fill="#ffffff">Live</text>
+  
+  <!-- Push Notification -->
+  <rect x="20" y="140" width="120" height="25" rx="8" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+  <circle cx="30" cy="152" r="4" fill="#3498db"/>
+  <text x="25" y="156" font-family="sans-serif" font-size="6" fill="#ffffff" font-weight="bold">📱</text>
+  <text x="40" y="150" font-family="sans-serif" font-size="6" fill="#2c3e50" font-weight="bold">New message from Jane</text>
+  <text x="40" y="158" font-family="sans-serif" font-size="5" fill="#7f8c8d">Can you share a demo?</text>
+</svg>

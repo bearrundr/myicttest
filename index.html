@@ -3,420 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Design Studio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2d2d2d 100%);
-            color: #ffffff;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Header Section */
-        .header {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: radial-gradient(circle at 30% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 90%, rgba(120, 219, 226, 0.2) 0%, transparent 50%);
-        }
-
-        .hero-content {
-            text-align: center;
-            z-index: 3;
-            position: relative;
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 8rem);
-            font-weight: 100;
-            letter-spacing: -0.02em;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #ffffff 0%, #b3b3b3 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            font-weight: 300;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 3rem;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .cta-button:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: all 0.6s;
-        }
-
-        .cta-button:hover:before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            border-color: rgba(255, 255, 255, 0.6);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            z-index: 1000;
-            display: flex;
-            gap: 2rem;
-            animation: fadeInDown 1s ease-out 0.8s both;
-        }
-
-        .nav-item {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-item:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: white;
-            transition: width 0.3s ease;
-        }
-
-        .nav-item:hover {
-            color: white;
-        }
-
-        .nav-item:hover:after {
-            width: 100%;
-        }
-
-        /* Content Section */
-        .content-section {
-            padding: 8rem 2rem;
-            background: rgba(0, 0, 0, 0.3);
-            -webkit-backdrop-filter: blur(20px); /* For Safari support */
-            backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 100;
-            text-align: center;
-            margin-bottom: 4rem;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0;
-            padding: 3rem 2rem;
-            text-align: center;
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        .card:nth-child(2) { animation-delay: 0.2s; }
-        .card:nth-child(3) { animation-delay: 0.4s; }
-
-        .card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-        }
-
-        .card:hover:before {
-            transform: translateX(100%);
-        }
-
-        .card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-10px);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
-        }
-
-        .card-text {
-            font-size: 1rem;
-            line-height: 1.8;
-            opacity: 0.7;
-            font-weight: 300;
-        }
-
-        /* Footer */
-        .footer {
-            padding: 4rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .footer-text {
-            font-size: 0.9rem;
-            opacity: 0.5;
-            font-weight: 300;
-            letter-spacing: 0.1em;
-        }
-
-        /* Floating Elements */
-        .floating-element {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            width: 100px;
-            height: 100px;
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            width: 80px;
-            height: 80px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav { display: none; }
-            .content-section { padding: 4rem 1rem; }
-            .grid { grid-template-columns: 1fr; gap: 2rem; }
-            .card { padding: 2rem 1.5rem; }
-        }
-    </style>
+    <title>정대용 - 포트폴리오</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-
-    <nav class="nav">
-        <a href="#home" class="nav-item">HOME</a>
-        <a href="#about" class="nav-item">ABOUT</a>
-        <a href="#contact" class="nav-item">CONTACT</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">DY Jung</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
-        <section class="header" id="home">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">ELEGANT</h1>
-                <p class="hero-subtitle">Minimalist Design Excellence</p>
-                <a href="#about" class="cta-button">DISCOVER MORE</a>
-            </div>
-        </section>
-
-        <section class="content-section" id="about">
-            <h2 class="section-title">Our Philosophy</h2>
-            
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3 class="card-title">Performance</h3>
-                    <p class="card-text">Lightning-fast experiences crafted with precision and attention to every detail that matters most.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🎨</div>
-                    <h3 class="card-title">Aesthetics</h3>
-                    <p class="card-text">Beautiful, timeless designs that transcend trends and create lasting emotional connections.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🚀</div>
-                    <h3 class="card-title">Innovation</h3>
-                    <p class="card-text">Pushing boundaries with cutting-edge technology and forward-thinking design principles.</p>
+                <h1 class="hero-title">
+                    안녕하세요, <span class="highlight">정대용</span>입니다
+                </h1>
+                <p class="hero-subtitle">
+                    Full Stack Developer & Software Engineer
+                </p>
+                <p class="hero-description">
+                    창의적인 문제 해결과 혁신적인 기술로 더 나은 디지털 경험을 만들어갑니다.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+                    <a href="#contact" class="btn btn-secondary">연락하기</a>
                 </div>
             </div>
-        </section>
-    </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Profile Photo">
+                    </div>
+                    <div class="profile-info">
+                        <h3>정대용</h3>
+                        <p>Software Engineer</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">개발자로서의 여정과 철학</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        5년간의 소프트웨어 개발 경험을 바탕으로 사용자 중심의 혁신적인 솔루션을 개발하고 있습니다. 
+                        프론트엔드부터 백엔드까지, 그리고 DevOps까지 전체적인 개발 라이프사이클을 아우르는 
+                        풀스택 개발자로서 다양한 프로젝트를 성공적으로 이끌어왔습니다.
+                    </p>
+                    <p>
+                        특히 사용자 경험(UX) 향상과 성능 최적화에 관심이 많으며, 
+                        항상 새로운 기술을 학습하고 적용하는 것을 즐깁니다. 
+                        팀워크를 중시하며 동료들과의 지식 공유를 통해 함께 성장하는 것을 추구합니다.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>20+</h4>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">경력 사항</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior Full Stack Developer</h3>
+                        <h4>TechCorp Solutions</h4>
+                        <p>
+                            대규모 웹 애플리케이션 개발 및 유지보수를 담당하며, React와 Node.js를 활용한 
+                            현대적인 풀스택 솔루션을 구축했습니다. 팀 리드로서 5명의 개발자를 이끌며 
+                            프로젝트 일정 관리와 코드 품질 향상에 기여했습니다.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>TypeScript</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2022</div>
+                    <div class="timeline-content">
+                        <h3>Frontend Developer</h3>
+                        <h4>StartupX Inc.</h4>
+                        <p>
+                            스타트업 환경에서 빠른 프로토타이핑과 MVP 개발을 경험했습니다. 
+                            Vue.js와 Nuxt.js를 활용하여 반응형 웹 애플리케이션을 개발하고, 
+                            사용자 경험 개선을 통해 전환율을 35% 향상시켰습니다.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>Vue.js</span>
+                            <span>Nuxt.js</span>
+                            <span>Sass</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>Junior Developer</h3>
+                        <h4>WebDev Agency</h4>
+                        <p>
+                            다양한 클라이언트 프로젝트를 통해 웹 개발의 기초를 다졌습니다. 
+                            PHP와 MySQL을 활용한 백엔드 개발과 jQuery를 이용한 프론트엔드 개발을 
+                            담당하며 전반적인 웹 개발 스택을 익혔습니다.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>jQuery</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">기술 스택</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-vuejs"></i>
+                            <span>Vue.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">주요 프로젝트</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="E-commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>React와 Node.js를 활용한 현대적인 전자상거래 플랫폼. 사용자 친화적인 인터페이스와 안전한 결제 시스템을 구축했습니다.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Data Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>실시간 데이터 시각화 대시보드. Vue.js와 D3.js를 활용하여 복잡한 데이터를 직관적으로 표현했습니다.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop" alt="Mobile App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>팀 협업을 위한 태스크 관리 애플리케이션. React Native를 사용하여 크로스 플랫폼 모바일 앱을 개발했습니다.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">연락처</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>함께 일하고 싶으시나요?</h3>
+                    <p>새로운 프로젝트나 협업 기회에 대해 언제든지 연락해 주세요. 흥미로운 도전을 기다리고 있습니다!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>daeyong.jung@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+82 10-1234-5678</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>서울, 대한민국</span>
+                        </div>
+                    </div>
+                    <div class="social-links-contact">
+                        <a href="#" class="social-link-contact"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link-contact"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link-contact"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-contact"><i class="fas fa-blog"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="이름" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="이메일" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="제목" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="메시지" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">메시지 보내기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p class="footer-text">© 2025 우아함 디자인 스튜디오 — 열정으로 만들어진 작품</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 정대용. All rights reserved.</p>
+                <p>Made with ❤️ and lots of ☕</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card, .section-title').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Parallax effect for floating elements
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.floating-element');
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = 0.2 + (index * 0.1);
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`;
-            });
-        });
-
-        // Mouse move parallax effect
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            document.querySelectorAll('.floating-element').forEach((element, index) => {
-                const speed = 10 + (index * 5);
-                const x = (mouseX - 0.5) * speed;
-                const y = (mouseY - 0.5) * speed;
-                
-                element.style.transform += ` translate(${x}px, ${y}px)`;
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

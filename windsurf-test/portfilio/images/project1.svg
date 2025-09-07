@@ -1,0 +1,96 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bg1)"/>
+  
+  <!-- E-commerce Platform Mockup -->
+  <!-- Browser Window -->
+  <rect x="50" y="40" width="300" height="180" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
+  
+  <!-- Browser Header -->
+  <rect x="50" y="40" width="300" height="25" rx="8" fill="#f8f9fa"/>
+  <circle cx="65" cy="52.5" r="3" fill="#ff6b6b"/>
+  <circle cx="80" cy="52.5" r="3" fill="#feca57"/>
+  <circle cx="95" cy="52.5" r="3" fill="#48dbfb"/>
+  
+  <!-- URL Bar -->
+  <rect x="115" y="47" width="180" height="11" rx="5" fill="#ffffff" stroke="#dee2e6"/>
+  <text x="125" y="55" font-family="monospace" font-size="6" fill="#6c757d">https://ecommerce-platform.com</text>
+  
+  <!-- Navigation -->
+  <rect x="60" y="75" width="280" height="20" fill="#667eea"/>
+  <text x="70" y="87" font-family="sans-serif" font-size="8" fill="#ffffff" font-weight="bold">ShopTech</text>
+  <text x="280" y="87" font-family="sans-serif" font-size="6" fill="#ffffff">Cart (3) | $299</text>
+  
+  <!-- Product Grid -->
+  <!-- Product 1 -->
+  <rect x="70" y="105" width="70" height="50" rx="4" fill="#ffffff" stroke="#e9ecef"/>
+  <rect x="75" y="110" width="60" height="30" rx="2" fill="#f8f9fa"/>
+  <circle cx="105" cy="125" r="8" fill="#667eea"/>
+  <path d="M100 125 L105 120 L110 125 L105 130 Z" fill="#ffffff"/>
+  <text x="75" y="150" font-family="sans-serif" font-size="6" fill="#2c3e50">Laptop Pro</text>
+  <text x="115" y="150" font-family="sans-serif" font-size="6" fill="#e74c3c" font-weight="bold">$999</text>
+  
+  <!-- Product 2 -->
+  <rect x="150" y="105" width="70" height="50" rx="4" fill="#ffffff" stroke="#e9ecef"/>
+  <rect x="155" y="110" width="60" height="30" rx="2" fill="#f8f9fa"/>
+  <rect x="175" y="118" width="20" height="14" rx="2" fill="#3498db"/>
+  <text x="155" y="150" font-family="sans-serif" font-size="6" fill="#2c3e50">Smartphone</text>
+  <text x="195" y="150" font-family="sans-serif" font-size="6" fill="#e74c3c" font-weight="bold">$699</text>
+  
+  <!-- Product 3 -->
+  <rect x="230" y="105" width="70" height="50" rx="4" fill="#ffffff" stroke="#e9ecef"/>
+  <rect x="235" y="110" width="60" height="30" rx="2" fill="#f8f9fa"/>
+  <circle cx="265" cy="125" r="10" fill="#2ecc71"/>
+  <path d="M260 125 C260 120, 270 120, 270 125 C270 130, 260 130, 260 125" fill="#27ae60"/>
+  <text x="235" y="150" font-family="sans-serif" font-size="6" fill="#2c3e50">Headphones</text>
+  <text x="275" y="150" font-family="sans-serif" font-size="6" fill="#e74c3c" font-weight="bold">$199</text>
+  
+  <!-- Shopping Cart Icon -->
+  <rect x="310" y="105" width="25" height="50" rx="4" fill="#667eea"/>
+  <circle cx="322.5" cy="130" r="8" fill="#ffffff"/>
+  <path d="M318 130 L322 126 L327 130 L322 134 Z" fill="#667eea"/>
+  <text x="315" y="150" font-family="sans-serif" font-size="5" fill="#ffffff">Cart</text>
+  
+  <!-- Payment Section -->
+  <rect x="60" y="170" width="280" height="35" rx="4" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="70" y="182" font-family="sans-serif" font-size="7" fill="#2c3e50" font-weight="bold">Secure Checkout</text>
+  
+  <!-- Credit Cards -->
+  <rect x="70" y="188" width="25" height="12" rx="2" fill="#3498db"/>
+  <text x="72" y="196" font-family="sans-serif" font-size="4" fill="#ffffff">VISA</text>
+  
+  <rect x="100" y="188" width="25" height="12" rx="2" fill="#e74c3c"/>
+  <text x="105" y="196" font-family="sans-serif" font-size="4" fill="#ffffff">MC</text>
+  
+  <rect x="130" y="188" width="25" height="12" rx="2" fill="#f39c12"/>
+  <circle cx="142.5" cy="194" r="4" fill="#ffffff"/>
+  
+  <!-- Total -->
+  <text x="250" y="195" font-family="sans-serif" font-size="8" fill="#2c3e50" font-weight="bold">Total: $1,897.00</text>
+  
+  <!-- Microservices Architecture Indicators -->
+  <!-- Small service indicators -->
+  <circle cx="365" cy="60" r="4" fill="#2ecc71"/>
+  <text x="360" y="50" font-family="sans-serif" font-size="4" fill="#ffffff">Auth</text>
+  
+  <circle cx="365" cy="80" r="4" fill="#3498db"/>
+  <text x="357" y="70" font-family="sans-serif" font-size="4" fill="#ffffff">Payment</text>
+  
+  <circle cx="365" cy="100" r="4" fill="#e74c3c"/>
+  <text x="356" y="90" font-family="sans-serif" font-size="4" fill="#ffffff">Inventory</text>
+  
+  <!-- Connection lines (subtle) -->
+  <path d="M350 130 L365 80" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-dasharray="2,2"/>
+  <path d="M335 150 L365 100" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-dasharray="2,2"/>
+</svg>

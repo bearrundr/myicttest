@@ -1,0 +1,68 @@
+<svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="face" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd6cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb8a3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c1810;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0e08;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="140" cy="140" r="140" fill="url(#bg)"/>
+  
+  <!-- Professional Avatar -->
+  <!-- Head -->
+  <circle cx="140" cy="120" r="45" fill="url(#face)"/>
+  
+  <!-- Hair -->
+  <path d="M95 110 C95 75, 125 65, 140 65 C155 65, 185 75, 185 110 C185 95, 175 85, 160 85 C155 88, 145 88, 140 85 C135 88, 125 88, 120 85 C105 85, 95 95, 95 110 Z" fill="url(#hair)"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="128" cy="115" rx="4" ry="6" fill="#2c3e50"/>
+  <ellipse cx="152" cy="115" rx="4" ry="6" fill="#2c3e50"/>
+  <ellipse cx="128" cy="113" rx="1.5" ry="2" fill="#ffffff"/>
+  <ellipse cx="152" cy="113" rx="1.5" ry="2" fill="#ffffff"/>
+  
+  <!-- Eyebrows -->
+  <path d="M122 108 C126 106, 132 106, 135 108" stroke="#1a0e08" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M145 108 C148 106, 154 106, 158 108" stroke="#1a0e08" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nose -->
+  <path d="M140 120 C138 125, 142 125, 140 120" stroke="#e8a587" stroke-width="1.5" fill="none"/>
+  
+  <!-- Mouth -->
+  <path d="M133 130 C137 133, 143 133, 147 130" stroke="#d4956f" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Professional Shirt/Suit -->
+  <path d="M95 165 C95 160, 100 155, 110 155 L170 155 C180 155, 185 160, 185 165 L185 280 L95 280 Z" fill="#2c3e50"/>
+  
+  <!-- Shirt Collar -->
+  <path d="M110 155 C115 150, 125 150, 140 155 C155 150, 165 150, 170 155 L165 165 C160 160, 150 160, 140 165 C130 160, 120 160, 115 165 Z" fill="#ffffff"/>
+  
+  <!-- Tie -->
+  <path d="M140 155 C138 155, 136 157, 136 160 L134 200 C134 205, 138 210, 140 210 C142 210, 146 205, 146 200 L144 160 C144 157, 142 155, 140 155 Z" fill="#e74c3c"/>
+  
+  <!-- Tie Pattern -->
+  <circle cx="140" cy="170" r="2" fill="#c0392b"/>
+  <circle cx="140" cy="185" r="2" fill="#c0392b"/>
+  <circle cx="140" cy="200" r="2" fill="#c0392b"/>
+  
+  <!-- Jacket Lapels -->
+  <path d="M110 165 C105 170, 105 180, 110 185 L125 170 Z" fill="#34495e"/>
+  <path d="M170 165 C175 170, 175 180, 170 185 L155 170 Z" fill="#34495e"/>
+  
+  <!-- Professional Badge/Pin (Optional Tech Symbol) -->
+  <circle cx="158" cy="175" r="6" fill="#3498db"/>
+  <path d="M154 175 L158 171 L162 175 L158 179 Z" fill="#ffffff"/>
+  <circle cx="158" cy="175" r="2" fill="#2980b9"/>
+  
+  <!-- Subtle Shadow -->
+  <ellipse cx="140" cy="275" rx="45" ry="8" fill="#000000" opacity="0.1"/>
+</svg>
